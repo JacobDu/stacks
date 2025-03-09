@@ -2,7 +2,6 @@
 services:
   s-ui:
     image: alireza7/s-ui
-    container_name: s-ui
     hostname: "s-ui"
     volumes:
       - "singbox-db:/app/db"
