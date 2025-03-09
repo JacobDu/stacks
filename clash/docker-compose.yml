@@ -5,6 +5,11 @@ services:
     ports:
       - "7890:7890"
       - "7891:7891"
+      - "9090:9090"
+    expose:
+      - 9090
+    environment:
+      - CLASH_EXTERNAL_CONTROLLER=0.0.0.0:9090 
     restart: always
 
   yacd:
