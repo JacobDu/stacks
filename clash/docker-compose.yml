@@ -7,7 +7,7 @@ services:
       - "7891:7891"
       - "9090:9090"
     volumes:
-      - ./config.yaml:/root/.config/clash/config.yaml
+      - ./clash/config.yaml:/root/.config/clash/config.yaml
     restart: always
 
   yacd:
