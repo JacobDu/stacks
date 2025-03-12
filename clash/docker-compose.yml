@@ -7,7 +7,6 @@ services:
       - "9090:9090"
     configs:
       - clash_config:/root/.config/clash/config.yaml
-    restart: always
 
   yacd:
     image: haishanh/yacd
@@ -15,7 +14,6 @@ services:
       - "7892:80"
     depends_on:
       - clash
-    restart: always
 
 configs:
   clash_config:
