@@ -16,3 +16,7 @@ services:
     depends_on:
       - clash
     restart: always
+
+configs:
+  clash_config:
+    external: true
