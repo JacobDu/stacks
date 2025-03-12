@@ -10,7 +10,8 @@ services:
       - "7891:7891"
       - "9090:9090"
     configs:
-      - clash_config:/root/.config/clash/config.yaml
+      - source:  clash_config
+        target: /root/.config/clash/config.yaml
 
   yacd:
     image: haishanh/yacd
