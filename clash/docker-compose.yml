@@ -1,3 +1,7 @@
+configs:
+  clash_config:
+    external: true
+
 services:
   clash:
     image: dreamacro/clash
@@ -14,7 +18,3 @@ services:
       - "7892:80"
     depends_on:
       - clash
-
-configs:
-  clash_config:
-    external: true
