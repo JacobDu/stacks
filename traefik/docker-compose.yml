@@ -97,8 +97,11 @@ services:
       - traefik-public-certificates:/certificates
       # Mount log folder
       - ${TRAEFIK_LOG_DIR}:/var/log/traefik
+
+    configs:
       # Mount dynamic config
-      - ./config.yml:/etc/traefik/config.yml:ro
+      - source: traefik-public-config
+        target: /etc/traefik/config.yml
 
     command:
 
@@ -166,4 +169,8 @@ networks:
   # Use the previously created public network "traefik-public", shared with other
   # services that need to be publicly available via this Traefik
   traefik-public:
+    external: true
+
+configs:
+  traefik-public-config:
     external: true
