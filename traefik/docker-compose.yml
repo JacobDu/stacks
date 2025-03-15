@@ -76,9 +76,9 @@ services:
         - traefik.docker.lbswarm=true
 
         # Redirect non-www to www middleware
-        # - "traefik.http.middlewares.non-www-to-www.redirectregex.regex=^https?://(?:www\\.)?(.+)"
-        # - "traefik.http.middlewares.non-www-to-www.redirectregex.permanent=true"
-        # - "traefik.http.middlewares.non-www-to-www.redirectregex.replacement=https://www.$${1}"
+        - "traefik.http.middlewares.non-www-to-www.redirectregex.regex=^https?://(?:www\\.)?(.+)"
+        - "traefik.http.middlewares.non-www-to-www.redirectregex.permanent=true"
+        - "traefik.http.middlewares.non-www-to-www.redirectregex.replacement=https://www.$${1}"
 
       resources:
         limits:
