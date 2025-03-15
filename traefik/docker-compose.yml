@@ -141,10 +141,10 @@ services:
       - --entrypoints.mailhog.address=:8025
 
       # forward x-forward-host to container
-      - --entrypoints.http.proxyProtocol.trustedIPs=${IP_RANGE}
-      - --entrypoints.http.forwardedHeaders.trustedIPs=${IP_RANGE}
-      - --entrypoints.https.proxyProtocol.trustedIPs=${IP_RANGE}
-      - --entrypoints.https.forwardedHeaders.trustedIPs=${IP_RANGE}
+      # - --entrypoints.http.proxyProtocol.trustedIPs=${IP_RANGE}
+      # - --entrypoints.http.forwardedHeaders.trustedIPs=${IP_RANGE}
+      # - --entrypoints.https.proxyProtocol.trustedIPs=${IP_RANGE}
+      # - --entrypoints.https.forwardedHeaders.trustedIPs=${IP_RANGE}
 
 
       # adjust responding timeouts (large uploads) - values in seconds, 0 means no limit
